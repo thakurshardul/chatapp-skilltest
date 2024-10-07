@@ -1,0 +1,518 @@
+/* Mixins for different screen sizes */
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+/* Styling for the form container */
+.formContainer {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Styling for the form wrapper inside the container */
+  .formWrapper {
+    backdrop-filter: blur(15px) saturate(177%);
+    -webkit-backdrop-filter: blur(15px) saturate(177%);
+    background-color: rgba(17, 25, 40, 0.41);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    /*Styling for the profile image*/
+    .profileImg{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    /* Styling for heading elements h4 and h5 */
+    h4,
+    h5 {
+      color: #FFFFFF;
+      margin-top: -2px;
+      margin-bottom: 12px;
+    }
+
+    /* Styling for the button element */
+    button {
+      background-color: #db1f48;
+      color: #FFFFFF;
+      border-radius: 4px;
+      font-size: 12px;
+      height: 30px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Styling for the logo */
+    .logo {
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    /* Styling for the title */
+    .title {
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+
+    /* Styling for the form inside the wrapper */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      /* Styling for the input fields */
+      input {
+        width: 250px;
+        padding: 15px;
+        color: #FFFFFF;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px solid #a3a3b0;
+
+        &::placeholder {
+          color: rgb(175, 175, 175);
+        }
+      }
+
+      /* Styling for the label with an image */
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #FFFFFF;
+        font-size: 13px;
+        cursor: pointer;
+
+        /* Styling for the image inside the label */
+        img {
+          width: 26px;
+        }
+      }
+
+      /* Styling for the button inside the form */
+      button {
+        font-size: medium;
+        border-radius: 2px;
+        padding: 10px 14px 28px 14px;
+        font-weight: 600;
+        color: #FFFFFF;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      /* Styling for the file input */
+      #file {
+        display: none;
+      }
+    }
+
+    /* Styling for the paragraph element inside the form */
+    p {
+      color: #929898;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 2px;
+
+      /* Styling for the anchor tag inside the paragraph */
+      a {
+        font-size: smaller;
+        color:#FFFFFF;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* Styling for the home container */
+.home {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Styling for the container inside the home */
+  .container {
+    border: 1px solid rgb(80, 78, 78);
+    border-radius: 10px;
+    width: 60%;
+    height: 85vh;
+    display: flex;
+    overflow: hidden;
+
+    /* Media query mixin for tablet size */
+    @include tablet {
+      width: 90%;
+    }
+
+    /* Styling for the sidebar */
+    .sidebar {
+      flex: 1;
+      background-color: #1e0c07;
+      position: relative;
+
+      /* Styling for the navbar inside the sidebar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: #120101c2;
+        height: 50px;
+        padding: 10px;
+        justify-content: space-between;
+        color: #FFFFFF;
+
+        /* Styling for the logo inside the navbar */
+        .logo {
+          font-size: 24px;
+          font-weight: 700;
+          padding: 10px;
+
+          /* Media query mixin for tablet size */
+          @include tablet {
+            display: none;
+          }
+        }
+
+        /* Styling for the user info inside the navbar */
+        .user {
+          display: flex;
+          gap: 10px;
+          padding: 0 10px;
+          /* Styling for the anchor tag inside the user info */
+          a {
+            text-decoration: none;
+            color: white;
+          }
+          /* Styling for the user image */
+          img {
+            background-color: #ddddf7;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          /* Styling for the user name */
+          span.userName {
+            font-weight: 600;
+            position: relative;
+            top: 8px;
+          }
+
+          /* Styling for the button inside the user info */
+          button {
+            background-color: #de0c41;
+            color: #ddddf7;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+          }
+        }
+      }
+
+      /* Styling for the search section */
+      .search {
+        border-bottom: 1px solid gray;
+
+        /* Styling for the search form */
+        .searchForm {
+          padding: 10px;
+
+          /* Styling for the input inside the search form */
+          input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+        }
+      }
+
+      /* Styling for the chats section */
+      .chats {
+        overflow-y: scroll;
+        height: 61vh;
+        /* Hide scrollbar */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      /* Styling for the user chat */
+      .userChat {
+        padding: 3px 10px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: white;
+        cursor: pointer;
+
+        /* Hover effect */
+        &:hover {
+          background-color: #351f1b;
+        }
+
+        /* Styling for the user image inside the user chat */
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        /* Styling for the user chat info */
+        .userChatInfo {
+          /* Styling for the name span */
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+          /* Styling for the last message paragraph */
+          p {
+            margin-top: 2px;
+            font-size: 14px;
+            color: lightgray;
+          }
+        }
+      }
+    }
+
+    /* Styling for the chat panel */
+    .chatPanel {
+      flex: 2;
+
+      /* Styling for the chat info section */
+      .chatInfo {
+        height: 50px;
+        background-color: #2a140f;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: #FFFFFF;
+
+        /* Styling for the span with the chat user info */
+        span {
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-weight: 600;
+          padding-right: 1rem;
+
+          /* Styling for the user image inside the span */
+          img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+          }
+        }
+
+        /* Styling for the chat icons section */
+        .chatIcons {
+          display: flex;
+          gap: 12px;
+
+          /* Styling for the SVG icons */
+          svg {
+            cursor: pointer;
+          }
+        }
+      }
+
+      /* Styling for the messages section */
+      .messages {
+        background-image: url(https://t3.ftcdn.net/jpg/03/27/51/56/240_F_327515607_Hcps04aaEc7Ki43d1XZPxwcv0ZaIaorh.jpg);
+        object-fit: cover;
+        padding: 14px;
+        height: calc(100% - 160px);
+        overflow: scroll;
+        /* Hide scrollbar */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Styling for the message */
+        .message {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 10px;
+
+          /* Styling for the message info */
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            font-weight: 400;
+
+            /* Styling for the user image inside the message info */
+            img {
+              width: 34px;
+              height: 34px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            /* Styling for the timestamp */
+            span {
+              font-size: 10px;
+              font: weight 600px;
+              color: #000;
+            }
+          }
+
+          /* Styling for the message content */
+          .messageContent {
+            max-width: 75%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            /* Styling for the message text */
+            p {
+              color: #FFFFFF;
+              background-color: rgb(249, 157, 9);
+              padding: 10px 20px;
+              border-radius: 0px 10px 10px 10px;
+              max-width: max-content;
+            }
+
+            /* Styling for the message image */
+            img {
+              width: 65%;
+              height: 55%;
+            }
+          }
+
+          /* Styling for the message owner */
+          &.owner {
+            flex-direction: row-reverse;
+
+            /* Styling for the message content when the user is the owner */
+            .messageContent {
+              align-items: flex-end;
+            }
+            p {
+              background-color: hsl(241, 88%, 61%);
+              color: white;
+              border-radius: 10px 0px 10px 10px;
+            }
+          }
+        }
+      }
+
+      /* Styling for the input section */
+      .input {
+        height: 42px;
+        background-color: white;
+        border-top: 1px solid grey;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        /* Styling for the input field */
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding-right: 10px;
+          color: #2f2d52;
+          font-size: 16px;
+          font-weight: 500;
+
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+
+        /* Styling for the Emoji Picker */
+        .EmojiPickerReact {
+          position: absolute;
+          height: 61.5% !important;
+          width: 25% !important;
+          bottom: 160px;
+        }
+
+        /* Styling for the send button */
+        .send {
+          display: flex;
+          align-items: center;
+
+          /* Styling for the SVG icon in the send button */
+          svg {
+            cursor: pointer;
+          }
+
+          /* Styling for the emoji button */
+          .emojiButton {
+            background-color: transparent;
+            color: rgb(122, 119, 119);
+            font-size: 1.25rem;
+          }
+
+          /* Styling for the button with an image */
+          button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            /* Styling for the image inside the button */
+            img {
+              width: 24px;
+              height: 20px;
+            }
+          }
+
+          /* Styling for the label with an image */
+          label {
+            img {
+              height: 20px;
+              width: 20px;
+              margin-right: 10px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
