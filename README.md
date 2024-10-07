@@ -1,6 +1,6 @@
-# Coding_Ninjas_React_Skill_Test-3_ChatApp_ChatVerse
+# Coding_Ninjas_React_Skill_Test-3_ChatApp_Chatify
 
-This is the Hosting Page: https://piyush773.github.io/Coding_Ninjas_React_Skill_Test-3_ChatApp_ChatVerse/
+This is the Hosting Page:
 
 Functionality:
 

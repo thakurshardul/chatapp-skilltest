@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter basename="/Coding_Ninjas_React_Skill_Test-3_ChatApp_ChatVerse">
+      <BrowserRouter basename="/Coding_Ninjas_React_Skill_Test-3_ChatApp_Chatify">
         <ToastContainer/>
         <Routes>
           {/* Define the main route with a component or element */}

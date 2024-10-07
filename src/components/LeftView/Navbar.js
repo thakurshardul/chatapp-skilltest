@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <span className="logo">ChatVerse</span>
+      <span className="logo">Chatify</span>
 
       <div className="user">
         <Link to={"/profile"}>
