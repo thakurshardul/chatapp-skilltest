@@ -1,6 +1,6 @@
 # Coding_Ninjas_React_Skill_Test-3_ChatApp_Chatify
 
-This is the Hosting Page:
+This is the Hosting Page: https://chatapp-skilltest.vercel.app/
 
 Functionality:
 
