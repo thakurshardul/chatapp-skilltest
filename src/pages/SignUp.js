@@ -138,7 +138,7 @@ const SignUp = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">ChatVerse</span>
+        <span className="logo">Chatify</span>
         <span className="title">Sign Up</span>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Your Name..." required/>

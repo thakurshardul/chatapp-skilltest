@@ -56,7 +56,7 @@ const SignIn = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">ChatVerse</span>
+        <span className="logo">Chatify</span>
         <span className="title">Sign In</span>
         <form onSubmit={handleSubmit}>
           <input type="email" placeholder="Email..." required/>

@@ -19,11 +19,10 @@ const NotFound = () => {
         <div className={Styles.text}>
           <h1>404</h1>
           <h2>PAGE NOT FOUND</h2>
-          <h3>BACK TO HOME?</h3>
+          
           <Link to={"/"} className={Styles.yes}>
-            YES
+            <h3>BACK TO HOME?</h3>
           </Link>
-          <Link to={"https://www.youtube.com/channel/UClCLLStmE41ejOJZoZI237Q"}>NO</Link>
         </div>
       </section>
     </div>

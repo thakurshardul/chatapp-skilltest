@@ -39,7 +39,7 @@ const Profile = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <span className="logo">ChatVerse</span>
+        <span className="logo">Chatify</span>
         <img className="profileImg" src={currentUser.photoURL} alt="user" />
         <h4>{currentUser.displayName}</h4>
         <h5>{currentUser.email}</h5>
